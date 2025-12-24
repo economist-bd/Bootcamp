@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Web Development Bootcamp | MH Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Hind Siliguri', sans-serif; scroll-behavior: smooth; }
+        .gradient-text {
+            background: linear-gradient(to right, #2563eb, #9333ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        /* Chatbot Styles */
+        #chat-widget { display: none; transition: all 0.3s ease; }
+        .chat-open { display: flex !important; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2">
+                <div class="bg-blue-600 text-white p-2 rounded-lg font-bold text-xl">MH</div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold leading-none text-blue-900">MH Web Dev</span>
+                    <span class="text-xs text-gray-500 font-medium tracking-wider">ACADEMY</span>
+                </div>
+            </a>
+            <a href="#enroll" class="hidden md:block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-semibold transition">কোর্সে ভর্তি হোন</a>
+        </div>
+    </nav>
+
+    <section class="hero-bg text-white pt-32 pb-20 px-4">
+        <div class="container mx-auto grid md:grid-cols-2 gap-10 items-center">
+            <div class="space-y-6 text-center md:text-left">
+                <span class="bg-blue-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Business Bootcamp 2026</span>
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+                    AI দিয়ে ওয়েবসাইট তৈরি করুন <span class="text-yellow-400">কোডিং ছাড়াই!</span>
+                </h1>
+                <p class="text-lg text-gray-200">
+                    আইডিয়া জেনারেট থেকে শুরু করে সাইট পাবলিশ করা পর্যন্ত সবকিছু শিখুন আমাদের ৩০ দিনের এই বুটক্যাম্পে। সম্পূর্ণ ফ্রিতে টুলস ব্যবহার করে প্রফেশনাল ওয়েবসাইট তৈরি শিখুন।
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#enroll" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-bold text-lg text-center transition shadow-lg shadow-blue-500/30">
+                        এখনই এনরোল করুন - ৫০০৳
+                    </a>
+                    <a href="#details" class="border border-white hover:bg-white hover:text-black px-8 py-3 rounded-lg font-bold text-lg text-center transition">
+                        বিস্তারিত দেখুন
+                    </a>
+                </div>
+                <p class="text-sm text-gray-300 mt-2"><i class="fas fa-calendar-alt mr-2"></i>ক্লাস শুরু: ০১.০১.২০২৬</p>
+            </div>
+            
+            <div class="w-full bg-black rounded-xl overflow-hidden shadow-2xl border-4 border-gray-700">
+                <div class="relative pt-[56.25%]">
+                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/le7QAuyQGc4?si=u8UWcZVC4Ombj7Yb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="details" class="py-16 container mx-auto px-4">
+        <div class="grid md:grid-cols-3 gap-6 -mt-24 relative z-10">
+            <div class="bg-white p-8 rounded-xl shadow-lg border-b-4 border-blue-600">
+                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-2xl mb-4"><i class="fas fa-clock"></i></div>
+                <h3 class="text-xl font-bold mb-2">৩০ দিনের কোর্স</h3>
+                <p class="text-gray-600">সপ্তাহে ২ দিন লাইভ ক্লাস। হাতে কলমে কাজ শেখার সুযোগ।</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg border-b-4 border-purple-600">
+                <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 text-2xl mb-4"><i class="fas fa-robot"></i></div>
+                <h3 class="text-xl font-bold mb-2">AI পাওয়ার</h3>
+                <p class="text-gray-600">ChatGPT, Claude এবং অন্যান্য AI টুল ব্যবহার করে দ্রুত ডিজাইন।</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg border-b-4 border-green-600">
+                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-2xl mb-4"><i class="fas fa-money-bill-wave"></i></div>
+                <h3 class="text-xl font-bold mb-2">কোর্স ফি মাত্র ৫০০৳</h3>
+                <p class="text-gray-600">স্বল্প খরচে প্রফেশনাল স্কিল ডেভেলপ করার সুবর্ণ সুযোগ।</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">কোর্সের <span class="gradient-text">সাপ্তাহিক রুটিন</span></h2>
+                <p class="text-gray-600 mt-2">৩০ দিনে আমরা যা যা শিখবো</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="flex gap-4">
+                    <div class="flex flex-col items-center">
+                        <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">১</div>
+                        <div class="h-full w-1 bg-gray-200 mt-2"></div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg w-full hover:shadow-md transition">
+                        <h4 class="text-xl font-bold text-blue-900 mb-2">১ম সপ্তাহ: আইডিয়া ও প্ল্যানিং</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>AI দিয়ে ইউনিক ওয়েবসাইট আইডিয়া জেনারেট</li>
+                            <li>প্রয়োজনীয় কনটেন্ট ও ছবি তৈরি (AI Tools)</li>
+                            <li>ফ্রি হোস্টিং ও ডোমেইন সম্পর্কে ধারণা</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="flex flex-col items-center">
+                        <div class="w-10 h-10 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold">২</div>
+                        <div class="h-full w-1 bg-gray-200 mt-2"></div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg w-full hover:shadow-md transition">
+                        <h4 class="text-xl font-bold text-purple-900 mb-2">২য় সপ্তাহ: ডিজাইন ও লেআউট</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>AI ব্যবহার করে মডার্ন ওয়েবসাইট লেআউট তৈরি</li>
+                            <li>কালার প্যালেট ও ফন্ট সিলেকশন</li>
+                            <li>ল্যান্ডিং পেইজ স্ট্রাকচার দাঁড় করানো</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="flex flex-col items-center">
+                        <div class="w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold">৩</div>
+                        <div class="h-full w-1 bg-gray-200 mt-2"></div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg w-full hover:shadow-md transition">
+                        <h4 class="text-xl font-bold text-green-900 mb-2">৩য় সপ্তাহ: ডেভেলপমেন্ট (নো-কোড)</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>HTML/CSS জেনারেট করা AI দিয়ে</li>
+                            <li>রেসপনসিভ ডিজাইন ফিক্স করা</li>
+                            <li>ফরম ও বাটন ইন্টিগ্রেশন</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="flex flex-col items-center">
+                        <div class="w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center font-bold">৪</div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg w-full hover:shadow-md transition">
+                        <h4 class="text-xl font-bold text-red-900 mb-2">৪র্থ সপ্তাহ: পাবলিশ ও মার্কেটিং</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>GitHub ও Vercel এ সাইট পাবলিশ করা</li>
+                            <li>বেসিক SEO সেটআপ</li>
+                            <li>কোর্স সমাপনী ও প্রজেক্ট শোকেসিং</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-10">আপনার ইনস্ট্রাক্টর</h2>
+            <div class="bg-white p-8 rounded-2xl shadow-xl max-w-2xl mx-auto flex flex-col md:flex-row items-center gap-8">
+                <div class="w-40 h-40 flex-shrink-0">
+                    <img src="https://i.ibb.co.com/LDMM7qTn/d.png" alt="Monjurul Haque" class="w-full h-full object-cover rounded-full border-4 border-blue-600 p-1">
+                </div>
+                <div class="text-left">
+                    <h3 class="text-2xl font-bold text-gray-900">মঞ্জুরুল হক</h3>
+                    <p class="text-blue-600 font-medium mb-4">Founder, MH Web Development Academy</p>
+                    <p class="text-gray-600">দীর্ঘদিন ধরে ওয়েব ডেভেলপমেন্ট এবং টেকনোলজি নিয়ে কাজ করছি। আমার লক্ষ্য হলো জটিল বিষয়গুলোকে সহজ করে আপনাদের সামনে তুলে ধরা যাতে আপনিও একজন দক্ষ ডেভেলপার হতে পারেন।</p>
+                    <div class="mt-4 flex gap-4">
+                        <a href="mailto:monjurul.jusc@gmail.com" class="text-gray-500 hover:text-blue-600"><i class="fas fa-envelope text-xl"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fab fa-linkedin text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="enroll" class="py-20 bg-blue-900 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div class="absolute top-0 right-0 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-xl mx-auto bg-white rounded-2xl shadow-2xl p-8 md:p-10">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-2">আজই এনরোল করুন</h2>
+                <p class="text-center text-gray-500 mb-8">আসন সংখ্যা সীমিত! দ্রুত আপনার সিট কনফার্ম করুন।</p>
+                
+                <form id="enrollmentForm" action="https://formspree.io/f/mkgklkga" method="POST" class="space-y-5">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">আপনার নাম</label>
+                        <input type="text" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition" placeholder="সম্পূর্ণ নাম লিখুন">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">ইমেইল এড্রেস</label>
+                        <input type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition" placeholder="monjurul@example.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">মোবাইল নাম্বার (WhatsApp)</label>
+                        <input type="tel" name="phone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition" placeholder="017XXXXXXXX">
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-lg text-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
+                        সাবমিট করুন
+                    </button>
+                </form>
+
+                <div id="successMessage" class="hidden mt-6 bg-green-50 border border-green-200 rounded-lg p-4 text-center">
+                    <div class="text-green-600 text-5xl mb-2"><i class="fas fa-check-circle"></i></div>
+                    <h3 class="text-xl font-bold text-green-800">অভিনন্দন!</h3>
+                    <p class="text-gray-700 mt-2">আপনার তথ্য জমা হয়েছে। দয়া করে <strong>৫০০ টাকা</strong> পরিশোধ করে ক্লাসে অংশগ্রহণ নিশ্চিত করুন।</p>
+                    <p class="text-sm text-gray-500 mt-2">আমাদের প্রতিনিধি শীঘ্রই আপনার সাথে যোগাযোগ করবে।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-10 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center items-center gap-2 mb-4">
+                <div class="bg-blue-600 text-white p-1 rounded font-bold text-sm">MH</div>
+                <span class="font-bold text-lg">MH Web Dev Academy</span>
+            </div>
+            <p class="text-gray-400 text-sm mb-6">Learn to build, Learn to grow.</p>
+            <div class="flex justify-center gap-6 text-2xl mb-8">
+                <a href="#" class="hover:text-blue-500 transition"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="hover:text-red-500 transition"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="hover:text-pink-500 transition"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="text-gray-500 text-sm">
+                &copy; 2026 MH Web Development Academy. All rights reserved.
+            </div>
+            <div class="mt-2 text-xs text-gray-600">
+                Contact: 01715247588 | monjurul.jusc@gmail.com
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/8801715247588" target="_blank" class="fixed bottom-6 left-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition hover:scale-110 flex items-center gap-2 group">
+        <i class="fab fa-whatsapp text-3xl"></i>
+        <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 text-sm font-bold">চ্যাট করুন</span>
+    </a>
+
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+        <div id="chat-window" class="hidden bg-white w-80 h-96 rounded-2xl shadow-2xl mb-4 flex-col border border-gray-200 overflow-hidden">
+            <div class="bg-blue-600 p-4 text-white flex justify-between items-center">
+                <h4 class="font-bold"><i class="fas fa-robot mr-2"></i>AI Assistant</h4>
+                <button onclick="toggleChat()" class="hover:text-gray-200"><i class="fas fa-times"></i></button>
+            </div>
+            <div id="chat-messages" class="flex-1 p-4 overflow-y-auto bg-gray-50 space-y-3 text-sm">
+                <div class="bg-blue-100 p-2 rounded-lg rounded-tl-none self-start max-w-[80%] text-gray-800">
+                    হ্যালো! আমি MH Academy-র AI অ্যাসিস্ট্যান্ট। কোর্স সম্পর্কে কোনো প্রশ্ন আছে?
+                </div>
+            </div>
+            <div class="p-3 border-t bg-white flex gap-2">
+                <input type="text" id="user-input" class="flex-1 border rounded-full px-4 py-2 text-sm focus:outline-none focus:border-blue-500" placeholder="এখানে লিখুন...">
+                <button onclick="sendMessage()" class="bg-blue-600 text-white w-10 h-10 rounded-full hover:bg-blue-700 flex items-center justify-center transition">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+
+        <button onclick="toggleChat()" class="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition hover:scale-110">
+            <i class="fas fa-comment-dots text-2xl"></i>
+        </button>
+    </div>
+
+    <script>
+        // Form Handling
+        const form = document.getElementById("enrollmentForm");
+        const successMsg = document.getElementById("successMessage");
+
+        async function handleSubmit(event) {
+            event.preventDefault();
+            const data = new FormData(event.target);
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    form.style.display = "none";
+                    successMsg.classList.remove("hidden");
+                } else {
+                    alert("দুঃখিত, কোনো সমস্যা হয়েছে। আবার চেষ্টা করুন।");
+                }
+            }).catch(error => {
+                alert("দুঃখিত, কোনো সমস্যা হয়েছে। আবার চেষ্টা করুন।");
+            });
+        }
+        form.addEventListener("submit", handleSubmit);
+
+
+        // Chatbot Logic
+        // WARNING: Using API Key in frontend is risky for production. 
+        // For this demo/bootcamp project it is fine, but consider backend proxy for real apps.
+        const API_KEY = "AIzaSyCyAlSOIdLgcMjqav2JLLwvywii-ZkoxOs"; 
+        
+        function toggleChat() {
+            const chatWindow = document.getElementById('chat-window');
+            chatWindow.classList.toggle('hidden');
+            chatWindow.classList.toggle('flex');
+        }
+
+        async function sendMessage() {
+            const inputField = document.getElementById('user-input');
+            const messagesDiv = document.getElementById('chat-messages');
+            const userText = inputField.value.trim();
+
+            if (!userText) return;
+
+            // Add User Message
+            appendMessage(userText, 'user');
+            inputField.value = '';
+
+            // Loading indicator
+            const loadingDiv = document.createElement('div');
+            loadingDiv.className = 'text-xs text-gray-500 ml-2';
+            loadingDiv.innerText = 'AI লিখছে...';
+            messagesDiv.appendChild(loadingDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
+            try {
+                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${API_KEY}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        contents: [{ parts: [{ text: "You are a helpful assistant for MH Web Development Academy. The course fee is 500 Taka, 30 days duration, starts 01.01.2026. Answer briefly in Bengali. User asks: " + userText }] }]
+                    })
+                });
+
+                const data = await response.json();
+                messagesDiv.removeChild(loadingDiv); // Remove loading
+
+                if(data.candidates && data.candidates[0].content){
+                    const aiText = data.candidates[0].content.parts[0].text;
+                    appendMessage(aiText, 'ai');
+                } else {
+                    appendMessage("দুঃখিত, আমি এখন উত্তর দিতে পারছি না।", 'ai');
+                }
+
+            } catch (error) {
+                messagesDiv.removeChild(loadingDiv);
+                appendMessage("নেটওয়ার্ক সমস্যা। আবার চেষ্টা করুন।", 'ai');
+                console.error(error);
+            }
+        }
+
+        function appendMessage(text, sender) {
+            const messagesDiv = document.getElementById('chat-messages');
+            const div = document.createElement('div');
+            
+            if (sender === 'user') {
+                div.className = 'bg-gray-200 p-2 rounded-lg rounded-tr-none self-end max-w-[80%] text-gray-800 ml-auto';
+            } else {
+                div.className = 'bg-blue-100 p-2 rounded-lg rounded-tl-none self-start max-w-[80%] text-gray-800';
+            }
+            
+            // Convert simple markdown bold to HTML bold if needed, or just plain text
+            div.innerText = text; 
+            messagesDiv.appendChild(div);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+
+        // Allow pressing Enter to send
+        document.getElementById('user-input').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
+</body>
+</html>
